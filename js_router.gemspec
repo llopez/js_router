@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["luigibyte"]
   s.date = %q{2011-03-06}
+  s.email = %q{luigibyte@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
   ]
@@ -21,6 +22,7 @@ Gem::Specification.new do |s|
      "lib/js_router.rb",
      "lib/js_router/engine.rb"
   ]
+  s.homepage = %q{http://github.com/llopez/js_router}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
