@@ -1,0 +1,18 @@
+  Processing by JsRouter::RoutesController#index as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/routes?format=js" for 127.0.0.1 at Sun Mar 06 19:54:08 -0300 2011
+  Processing by JsRouter::RoutesController#index as JS
+Rendered /Users/luis/projects/js_router/app/views/js_router/routes/_route.js.erb (1.2ms)
+Completed 200 OK in 824ms (Views: 822.9ms | ActiveRecord: 0.0ms)
+  Processing by JsRouter::RoutesController#index as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/routes?format=js" for 127.0.0.1 at Sun Mar 06 19:55:22 -0300 2011
+  Processing by JsRouter::RoutesController#index as JS
+Rendered /Users/luis/projects/js_router/app/views/js_router/routes/_route.js.erb (1.4ms)
+Completed 200 OK in 810ms (Views: 809.8ms | ActiveRecord: 0.0ms)
