@@ -1,11 +1,1 @@
-<% @named_routes.each do |route| %>
-  function <%= route[:name] %>_path(<%= route[:params].join(', ') %>){
-    path = "<%= route[:path] %>";
-    <% unless route[:params].empty? %>
-      $.each([<%= route[:params].collect{|x| "'#{x}'"}.join(', ') %>], function(i, item){
-        path = path.replace(':'+item, eval(item));
-      })
-    <% end %>
-    return path;
-  }
-<% end %>
+<%= raw @compressor.compress(render :partial => "route", :collection => @named_routes) %>

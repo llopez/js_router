@@ -1,5 +1,6 @@
 require "js_router"
 require "rails"
+require "yui/compressor"
 
 module JsRouter
   class Engine < Rails::Engine
