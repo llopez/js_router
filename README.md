@@ -44,3 +44,7 @@ You may do. (for example)
 
     :javascript
       location.href = new_post_path
+
+### Testing
+
+    rake test
