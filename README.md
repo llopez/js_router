@@ -3,13 +3,21 @@ Js Router
 
 ### Introduction:
 
-This is a Rails Engine.
+This is a Rails Engine for Rails3.
+
+Map your rails url helpers into javascript functions.
 
 ### Instalation:
 
 Add to your Gemfile.
 
     gem 'js_router', :git => 'git://github.com/llopez/js_router.git'
+
+### Dependencies:
+
+This engine uses the yui-compressor gem for compact javascripts.
+
+    gem install yui-compressor
     
 ### Setup:
 
