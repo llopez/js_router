@@ -27,6 +27,25 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Javascript Routes Engine for Rails 3}
+  s.test_files = [
+    "test/dummy/app/controllers/application_controller.rb",
+     "test/dummy/app/helpers/application_helper.rb",
+     "test/dummy/config/application.rb",
+     "test/dummy/config/boot.rb",
+     "test/dummy/config/environment.rb",
+     "test/dummy/config/environments/development.rb",
+     "test/dummy/config/environments/production.rb",
+     "test/dummy/config/environments/test.rb",
+     "test/dummy/config/initializers/backtrace_silencers.rb",
+     "test/dummy/config/initializers/inflections.rb",
+     "test/dummy/config/initializers/mime_types.rb",
+     "test/dummy/config/initializers/secret_token.rb",
+     "test/dummy/config/initializers/session_store.rb",
+     "test/dummy/config/routes.rb",
+     "test/functional/routes_controller_test.rb",
+     "test/integration/routes_test.rb",
+     "test/test_helper.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
