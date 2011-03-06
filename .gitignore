@@ -2,3 +2,4 @@ pkg
 .rvmrc
 Rakefile
 Gemfile.lock
+test/dummy

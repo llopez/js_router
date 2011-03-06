@@ -1,3 +1,3 @@
-Rails.application.routes.draw do |map|  
-  match "javascripts/routes" => "js_router/routes#index"
+Rails.application.routes.draw do
+  match "javascripts/routes", :to => "js_router/routes#index"
 end
