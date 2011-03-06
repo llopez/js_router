@@ -1,9 +1,11 @@
 function <%= route[:name] %>_path(<%= route[:params].join(', ') %>){
   path = '<%= route[:path] %>';
   <% unless route[:params].empty? %>
-    $.each([<%= route[:params].collect{|x| "'#{x}'"}.join(', ') %>], function(i, item){
-      path = path.replace(':'+item, eval(item));
-    })
+    params = [<%= route[:params].collect{|x| "'#{x}'"}.join(', ') %>]    
+    for(i=0; i < <%=route[:params].length %>; i++)
+    {
+      path = path.replace(':'+ params[i], eval(params[i]))
+    }
   <% end %>
   return path;
 }
