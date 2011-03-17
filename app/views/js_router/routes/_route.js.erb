@@ -1,4 +1,4 @@
-function <%= route[:name] %>_path(<%= route[:params].join(', ') %>){
+function <%= route[:name] %>_path(<%= (route[:params] + ['extra']).join(', ') %>){
   path = '<%= route[:path] %>';
   <% unless route[:params].empty? %>
     params = [<%= route[:params].collect{|x| "'#{x}'"}.join(', ') %>]    
@@ -7,5 +7,18 @@ function <%= route[:name] %>_path(<%= route[:params].join(', ') %>){
       path = path.replace(':'+ params[i], eval(params[i]))
     }
   <% end %>
+  chain = "?";
+  if(typeof(extra) == "object" )
+    {
+      for(property in extra)
+      {
+        param = property + "=" + encodeURIComponent(extra[property]);
+        if(chain == "?")
+          chain = chain + param;
+        else
+          chain = chain + "&" + param;
+      }
+      path = path + chain;  
+    }
   return path;
 }
