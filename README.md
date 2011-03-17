@@ -7,11 +7,15 @@ This is a Rails Engine for Rails3.
 
 Map your rails url helpers into javascript functions.
 
-### Instalation:
+### Installation:
 
 Add to your Gemfile.
 
     gem 'js_router', :git => 'git://github.com/llopez/js_router.git'
+
+Then:
+
+    $ bundle
 
 ### Dependencies:
 
@@ -35,16 +39,26 @@ If your config/routes.rb file looks like this:
 
 Map to:
 
-    posts_path
-    new_post_path
-    post_path(1)
-    edit_post_path(1)
+    posts_path()      => /posts 
+    new_post_path()   => /posts/new
+    post_path(1)      => /posts/1
+    edit_post_path(1) => /posts/1/edit
+
+Or with extra params:
+
+    post_path(1, {name: 'john', type: 'person'})  => /posts/1?name=john&type=person
 
 You may do. (for example)
 
     :javascript
       location.href = new_post_path
+      location.href = post_path(1)
+      location.href = post_path(1, {other: 'an other param'})
 
 ### Testing
 
     rake test
+    
+### TODO
+
+More Object Oriented JavaScript.
