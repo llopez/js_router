@@ -9,13 +9,14 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["luigibyte"]
-  s.date = %q{2011-03-17}
+  s.date = %q{2011-03-30}
   s.email = %q{luigibyte@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
   ]
   s.files = [
     "app/controllers/js_router/routes_controller.rb",
+    "app/views/js_router/routes/_object.js.erb",
     "app/views/js_router/routes/_route.js.erb",
     "app/views/js_router/routes/index.js.erb",
     "config/routes.rb",
