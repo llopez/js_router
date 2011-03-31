@@ -5,7 +5,7 @@ Js Router
 
 This is a Rails Engine for Rails3.
 
-Map your rails url helpers into javascript functions.
+Map your rails url helpers into javascript.
 
 ### Installation:
 
@@ -37,23 +37,16 @@ If your config/routes.rb file looks like this:
       resources :posts
     end
 
-Map to:
+You can do:
 
-    posts_path()      => /posts 
-    new_post_path()   => /posts/new
-    post_path(1)      => /posts/1
-    edit_post_path(1) => /posts/1/edit
+    jsRouter.postsPath()     => /posts
+    jsRouter.newPostPath()   => /posts/new
+    jsRouter.postPath(1)     => /posts/1
+    jsRouter.editPostPath(1) => /posts/1/edit
 
 Or with extra params:
 
-    post_path(1, {name: 'john', type: 'person'})  => /posts/1?name=john&type=person
-
-You may do. (for example)
-
-    :javascript
-      location.href = new_post_path
-      location.href = post_path(1)
-      location.href = post_path(1, {other: 'an other param'})
+    postPath(1, {name: 'john', type: 'person'})  => /posts/1?name=john&type=person
 
 ### Testing
 
@@ -61,4 +54,8 @@ You may do. (for example)
     
 ### TODO
 
-More Object Oriented JavaScript.
+Generate urls with domain.
+
+### Author
+
+llopez (Luis Lopez).
