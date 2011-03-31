@@ -1,0 +1,19 @@
+JsRouter = function(){
+  <%= render :partial => "route", :collection => @named_routes %>
+  this.path = function(segments, format){
+    for(property in segments)
+    {
+      format = format.replace(':' + property, segments[property])
+    }
+      return format;
+  }
+  this.params = function(params){
+    if(!params || typeof(params) != 'object' ){return ""}
+    chain = "?"
+    for(property in params){
+      param = property + "=" + encodeURIComponent(params[property]);
+      if(chain == "?"){chain = chain + param;} else {chain = chain + "&" + param;}
+    }
+    return chain;
+  }
+}

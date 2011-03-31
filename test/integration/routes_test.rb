@@ -18,7 +18,7 @@ class JsRouter::RoutesTest < ActionController::IntegrationTest
     get "javascripts/routes", :format => :js
     js = response.body
     @names.each do |name|
-      assert_nothing_raised("Johnson::Error"){ Johnson.evaluate(js + ";#{name}_path();") }
+      assert_nothing_raised("Johnson::Error"){ Johnson.evaluate(js + "; router = new JsRouter; router.#{name}_path();") }
     end
   end
 end
