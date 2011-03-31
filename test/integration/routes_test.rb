@@ -10,7 +10,7 @@ class JsRouter::RoutesTest < ActionController::IntegrationTest
     assert_kind_of YUI::JavaScriptCompressor, assigns(:compressor)
     assert_template "index"
     @names.each do |name|
-      assert_match /#{name}/, response.body
+      assert_match /#{name.to_s.camelize(:lower)}/, response.body
     end
   end
   
@@ -18,7 +18,7 @@ class JsRouter::RoutesTest < ActionController::IntegrationTest
     get "javascripts/routes", :format => :js
     js = response.body
     @names.each do |name|
-      assert_nothing_raised("Johnson::Error"){ Johnson.evaluate(js + "; router = new JsRouter; router.#{name}_path();") }
+      assert_nothing_raised("Johnson::Error"){ Johnson.evaluate(js + "; jsRouter.#{name.to_s.camelize(:lower)}Path();") }
     end
   end
 end

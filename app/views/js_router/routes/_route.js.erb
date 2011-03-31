@@ -1,4 +1,4 @@
-this.<%= route[:name] %>_path = function(<%= (route[:params] + ['params']).join(', ') %>){
+this.<%= route[:name].to_s.camelize(:lower) %>Path = function(<%= (route[:params] + ['params']).join(', ') %>){
   segments = {<%= route[:params].collect{|p| "#{p}: eval('#{p}')"}.join(', ')%>};
   format = '<%= route[:path] %>';
   return this.path(segments, format) + this.params(params);
