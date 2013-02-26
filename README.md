@@ -1,6 +1,8 @@
 Js Router
 =========
 
+[![Build Status](https://travis-ci.org/llopez/js_router.png?branch=master)](https://travis-ci.org/llopez/js_router)
+
 ### Introduction:
 
 This is a Rails Engine for Rails3.
